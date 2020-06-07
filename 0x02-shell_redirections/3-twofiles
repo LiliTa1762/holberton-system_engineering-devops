@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -vIr "\x00" -- .
+cat /etc/passwd /etc/hosts
