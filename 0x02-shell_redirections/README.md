@@ -1,0 +1,1 @@
+All about Shell: redirection, special characters. Topics in here: echo, head, tail, cut, sort, so on.
