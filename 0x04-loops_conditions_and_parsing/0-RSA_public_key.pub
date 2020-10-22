@@ -1,3 +1,1 @@
-#!/usr/bin/env bash
-# Creating a RSA key pair
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDPSZy43H9LoII2YVIdQNrKpVCBkk6vUgZMU5Ti3qvQUOBFqXjYAyCHFXsin45Kgau/acpFeMlTzhBXu4ePf6H5HCntvsNGYaRtfqGGcqzcRJO5sTABDb1H61pF/xq1XSg6okIqo3Hv/PHrNRIH3sxWpv/q8tv8yzxwJ5bT9LSeXMiCyAQIu54uSXTPXy6gtIlWG+nlqgj1O8cjbZtH87IG/npIM/bH0JB+/2pEFlQ84OKHuOsompXTG2CY9W3FpcNIxSM3lxQurK8ACww/qk/wXEeuEjANWchv+GnfXxCDwekRp7CL0pfumMacK03aJcHuCOHCHwkU/PS1WXcLPqXl lilibeth@MacBook-Pro-de-Mac.local
