@@ -3,5 +3,5 @@
 counter=20
 until [  $counter -lt 10 ]; do
     echo Holberton School
-    (( counter-=1 ))
+    (( counter-- ))
 done
