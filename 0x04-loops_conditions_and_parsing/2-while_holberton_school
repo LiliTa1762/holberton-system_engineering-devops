@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# While use to display 10 times a string
+#!/bin/bash
+counter=0
+while [ $counter -lt 10 ]; do
+   echo Holberton School
+   (( counter++ ))
+done
