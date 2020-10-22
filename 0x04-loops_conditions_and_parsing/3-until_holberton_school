@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# until use to display 10 times a string
+counter=20
+until [  $counter -lt 10 ]; do
+    echo Holberton School
+    counter-1
+done
