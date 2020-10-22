@@ -4,7 +4,7 @@ counter=0
 while [ $counter -lt 10 ]; do
    if test $counter -eq 9
    then
-   echo hi
+   echo Hi
    fi
    echo Holberton School
    (( counter++ ))
