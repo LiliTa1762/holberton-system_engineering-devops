@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # Getting info about a file
 file="holbertonschool"
-if [ -e "$file" ]; then
+if [ -e $file ]; then
   echo "$file file exists"
-  if [ -s "Sfile" ]; then
+  if [ -s $file ]; then
 	echo "$file file is not empty"
   else
 	echo "$file file is empty"
   fi
-  if [ -f "$file" ]; then
+  if [ -f $file ]; then
   	echo "$file is a regular file"
   fi
 else
