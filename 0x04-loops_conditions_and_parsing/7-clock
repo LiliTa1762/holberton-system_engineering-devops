@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# nested loop to print a clock
+h=0
+while [ $h -lt 13 ]
+do
+	echo "Hour: $h"
+	m=1
+	while [ $m -lt 60 ]
+	do
+	 echo $m
+	 (( m++ ))
+	done
+	(( h++ ))
+done
