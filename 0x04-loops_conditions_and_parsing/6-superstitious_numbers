@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # While use to display 10 times a string
-counter=0
-while [ $counter -lt 20 ]; do
+counter=1
+while [ $counter -lt 21 ]; do
 	echo $counter
 
 	case $counter in
