@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# While use to display 10 times a string
+counter=0
+while [ $counter -lt 20 ]; do
+	echo $counter
+
+	case $counter in
+	4)
+		echo "bad luck from China" ;;
+	9)
+		echo "bad luck from Japan" ;;
+	17)
+		echo "bad luck from Italy" ;;
+	esac
+	(( counter++ ))
+done
