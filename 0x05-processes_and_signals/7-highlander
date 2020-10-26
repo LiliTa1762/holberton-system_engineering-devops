@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Display, sleep and sign
+for (( ; ; ))
+do
+  echo "To infinity and beyond"
+  sleep 2
+  trap "{ echo I am invincible!!!; }" SIGTERM
+done 
