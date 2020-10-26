@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# PID without ps
+pgrep -olf bash
+echo $$ bash
