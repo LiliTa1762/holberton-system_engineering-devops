@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Kill the previous one
+pgrep -f 7-highlander | xargs kill -9
