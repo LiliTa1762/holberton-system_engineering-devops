@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 # PING, ICMP and connection speed
-for $1 in {1..5}; do
-	if $1; then
-		ping 8.8.8.8
-	else
-		echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
-	fi
-done
+if [ "$#" -ne 0 ]; then
+	ping -c 5 "$1"
+else
+	echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+fi
