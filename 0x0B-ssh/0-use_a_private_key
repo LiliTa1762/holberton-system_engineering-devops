@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Using my private key
+cat /home/vagrant/.ssh/id_rsa >> ~/.ssh/holberton
+ssh -i ~/.ssh/holberton
+ssh ubuntu@35.185.48.114
