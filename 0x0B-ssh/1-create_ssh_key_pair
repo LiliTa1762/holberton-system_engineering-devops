@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Creating an RSA key pair
+# -b bites, -P passphrase, -f filename of the key file
+ssh-keygen -t rsa -b 4096 -P betty -f holberton
