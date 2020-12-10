@@ -3,8 +3,17 @@
 
 sudo apt-get -y update
 sudo apt -y install nginx
-echo "Holberton School" > /var/www/html/index.html
-echo "Ceci n'est pas une page" > /var/www/html/404.html
-sed -i '/server_name _/a location /redirect_me { rewrite ^ https://www.youtube.com/watch?v=QH2-TGUlw\u4? permanent; }' /etc/nginx/sites-available/default
-sed -i '/server_name _/a error_page 404 /404.html; location = /404.html {root /var/www/html/; internal; }' /etc/nginx/sites-available/default
+ufw allow 'Nginx HTTP' # permisos para el puerto 80
+echo "Holberton School" > index.html
+sudo mv index.html /var/www/html/
+
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
+
+ARG_SED="/listen 80 default_server;/a "
+ARG_SED="${ARG_SED}rewrite ^/redirect_me https://www.youtube.com permanent;\n"
+ARG_SED="${ARG_SED}\terror_page 404 /custom_404.html;\n\tlocation = /custom_404.html "
+ARG_SED="${ARG_SED}{\n\t\troot /usr/share/nginx/html;\n\t\tinternal;\n\t}"
+
+sudo sed -i "${ARG_SED}" /etc/nginx/sites-available/default
+
 sudo service nginx restart
