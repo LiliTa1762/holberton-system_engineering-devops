@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Install NGINX and configure it
-apt-get  update
-apt-get -y install nginx
-echo "Holberton School" > /var/www/html/index.html
-service nginx restart
+sudo apt-get  update
+sudo apt-get -y install nginx
+echo "Holberton School" > index.html
+sudo mv index.html /var/www/html/index.html
+sudo service nginx restart
