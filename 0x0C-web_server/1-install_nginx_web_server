@@ -3,6 +3,6 @@
 
 sudo apt-get -y update
 sudo apt -y install nginx
-ufw allow 'Nginx HTTP' # permisos para el puerto 80
+sudo ufw allow 'Nginx HTTP' # permisos para el puerto 80
 sudo echo "Holberton School" | sudo tee /var/www/html/index.html
 sudo service nginx restart
