@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Install NGINX and redirect to 301
+
+sudo apt-get -y update
+sudo apt -y install nginx
+echo "Holberton School" > index.html
+sudo mv index.html /var/www/html/
+sudo sed -i '/listen 80 default_server;/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+sudo service nginx restart
