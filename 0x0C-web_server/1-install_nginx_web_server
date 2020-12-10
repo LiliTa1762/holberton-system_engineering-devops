@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Install NGINX and configure it
+
 sudo apt-get -y update
 sudo apt -y install nginx
 ufw allow 'Nginx HTTP' # permisos para el puerto 80
