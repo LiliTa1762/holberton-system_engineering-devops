@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Double the number of webservers
+
+sudo apt-get -y update
+sudo apt -y install nginx
+ufw allow 'Nginx HTTP' # permisos para el puerto 80
+echo "Holberton School" > index.html
+sudo mv index.html /var/www/html/
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
+
+ARG_SED="/listen 80 default_server;/a "
+ARG_SED="${ARG_SED}rewrite ^/redirect_me https://www.youtube.com permanent;\n"
+ARG_SED="${ARG_SED}\terror_page 404 /custom_404.html;\n\tlocation = /custom_404.html "
+ARG_SED="${ARG_SED}{\n\t\troot /usr/share/nginx/html;\n\t\tinternal;\n\t}"
+
+sudo sed -i "${ARG_SED}" /etc/nginx/sites-available/default
+
+sudo sed -i "/server_name _/ a\\\tadd_header X-Served-By \"\$HOSTNAME\";" /etc/nginx/sites-available/default
+
+sudo service nginx restart
