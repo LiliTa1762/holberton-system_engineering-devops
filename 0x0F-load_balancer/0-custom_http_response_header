@@ -15,6 +15,8 @@ ARG_SED="${ARG_SED}{\n\t\troot /usr/share/nginx/html;\n\t\tinternal;\n\t}"
 
 sudo sed -i "${ARG_SED}" /etc/nginx/sites-available/default
 
-sudo sed -i "/server_name _/ a\\\tadd_header X-Served-By \"\$HOSTNAME\";" /etc/nginx/sites-available/default
+NAME=$(cat /etc/hostname)
+ARG_SED="/location \/ {/a \\\t\tadd_header X-Served-By $NAME;"
+sudo sed -i "${ARG_SED}" /etc/nginx/sites-available/default
 
 sudo service nginx restart
