@@ -3,4 +3,3 @@ sudo ufw default allow outgoing
 sudo ufw allow 22
 sudo ufw allow proto tcp from any to any port 80,443
 sudo ufw enable
-sudo ufw status verbose
