@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Make your previous file short and sweet
-chmod 007 /etc/nginx/nginx.conf
+chmod 777 /etc/nginx/nginx.conf
 pkill apache2
 sed -i "s/80/8080/g" /etc/nginx/sites-available/default
 sudo -u nginx service nginx start
-chmod 000 /etc/nginx/nginx.conf
