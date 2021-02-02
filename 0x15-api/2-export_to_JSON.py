@@ -25,7 +25,8 @@ if __name__ == "__main__":
         user_task["username"] = data_user["username"]
         all_list.append(user_task)
 
-    new_dict[sys.argv[1]] = all_list #create the dict output
+    # create the dict output
+    new_dict[sys.argv[1]] = all_list
 
-    with open (sys.argv[1] + ".json", "w") as jf:
+    with open(sys.argv[1] + ".json", "w") as jf:
         json.dump(new_dict, jf)
