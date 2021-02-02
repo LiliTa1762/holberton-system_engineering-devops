@@ -18,14 +18,15 @@ if __name__ == "__main__":
     count_task = 0
     count_all_task = 0
 
+    # access to the value of the key completed
     for t in data_todos:
-        if t["completed"] is True:  # access to the value of the key completed
+        if t["completed"] is True:
             count_task += 1
             all_list.append(t["title"])
-            # add the value that is in the key Title in position t
         count_all_task += 1
+
     print("Employee {} is done with tasks({}/{})"
           .format(data_user['name'], count_task, count_all_task))
 
     for x in all_list:
-        print(("\t{}").format(x))
+        print(("\t {}").format(x))
