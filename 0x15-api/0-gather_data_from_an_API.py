@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Gather fake data from a API"""
 
 import requests
 import sys
