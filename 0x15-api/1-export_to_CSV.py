@@ -16,9 +16,12 @@ if __name__ == "__main__":
     data_user = user.json()
     data_todos = todos.json()
 
-with open(sys.argv[1] + '.csv', mode='w') as user_file:
-    user_writer = csv.writer(user_file, delimiter=',', quoting=csv.QUOTE_ALL)
+    filename = sys.argv[1] + '.csv'
 
-    for t in data_todos:
-        user_writer.writerow([t["userId"], data_user["username"],
-                              t["completed"], t["title"]])
+    with open(filename, mode='w') as user_file:
+        user_writer = csv.writer(
+                      user_file, delimiter=',', quoting=csv.QUOTE_ALL)
+
+        for t in data_todos:
+            user_writer.writerow([t["userId"], data_user["username"],
+                                  t["completed"], t["title"]])
