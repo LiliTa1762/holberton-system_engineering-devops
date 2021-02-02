@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Exporting all data to JSON"""
 
 import json
 import requests
