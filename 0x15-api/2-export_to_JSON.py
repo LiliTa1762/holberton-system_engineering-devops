@@ -28,5 +28,7 @@ if __name__ == "__main__":
     # create the dict output
     new_dict[sys.argv[1]] = all_list
 
-    with open(sys.argv[1] + ".json", "w") as jf:
+    filename = sys.argv[1] + ".json"
+
+    with open(filename, "w") as jf:
         json.dump(new_dict, jf)
