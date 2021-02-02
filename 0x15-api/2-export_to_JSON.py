@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Exporting data to JSON file by employee"""
 
 import json
 import requests
