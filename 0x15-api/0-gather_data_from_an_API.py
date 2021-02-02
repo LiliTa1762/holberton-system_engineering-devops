@@ -25,7 +25,7 @@ if __name__ == "__main__":
             all_list.append(t["title"])
         count_all_task += 1
 
-    print("Employee {} is done with tasks({}/{})"
+    print("Employee {} is done with tasks({}/{}):"
           .format(data_user['name'], count_task, count_all_task))
 
     for x in all_list:
