@@ -11,14 +11,12 @@ import requests
 
 
 def top_ten(subreddit):
-
     res = requests.get("https://reddit.com/r/{}/hot.json".format(subreddit),
                        headers={'User-agent': 'Fun_Cryptographer108'},
                        params={'limit': 10})
-    a = res.json()
 
     if (res.status_code != 200):
-        return None
+        print None
 
     else:
         x = a["data"]["children"]
