@@ -8,17 +8,16 @@ should return None.
 """
 
 
-import json
 import requests
-
 
 
 def recurse(subreddit, hot_list=[], after=""):
     """Function to return all hot titles"""
     after = {'after': after}
-    res = requests.get("https://reddit.com/r/{}/hot.json?after={}".format(subreddit, after),
-                       headers={'User-agent': 'Fun_Cryptographer108'},)
-    a = res.json()
+    res = requests.get("https://reddit.com/r/{}/hot.json?after={}".
+                       format(subreddit, after),
+                       headers={'User-agent': 'Fun_Cryptographer108'},
+                       allow_redirects=False)
 
     if (res.status_code == 200):
         hot_list += res.json().get("data", {}).get("children", [])
